@@ -1,13 +1,8 @@
-/*   1. Timeline - profesionist de adaugat
-     2. Navigation - responsive
-     3. Sectiune cu imagini sau combinatii
-     4. Tot proiectul responsive
-*/
-
 
 /* -------------------------------------- */
 /* BASIC SETUP */
 /* -------------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -35,7 +30,7 @@ h2 {
     font-weight: 300;
     font-size: 200%;
     background-color: #1abc9c;
-    color: #fff; /*#FBC11A galben*/ /*#008CDB albastru*/
+    color: #fff;                    /*#FBC11A galben*/ /*#008CDB albastru*/
     text-align: center;
     padding: 15px 0;
     margin-bottom: 80px;
@@ -104,7 +99,9 @@ p {
     scroll-margin-top: 50px;
 }
 
-/*  Header */
+       /*---------------*/
+      /*     Header    */
+     /*---------------*/
 
 #home-border-bottom {
     border-bottom: 2px solid #fff;
@@ -139,10 +136,10 @@ header {
 }
 
 .hero-text-box h3 {
-    font-size: 1.1rem;
-    font-weight: 300;
+    font-size: 1.2rem;
+    font-weight: 400;
     color: #fff;
-    width: 80%;
+    width: 90%;
     margin: 20px auto;
     text-align: center;
     word-spacing: 1.5px;
@@ -171,13 +168,12 @@ a:hover img{
 
 }
 
-
-/*------------------------*/
-/*      Timeline          */
-/*------------------------*/
+   /*------------------------*/
+  /*      Timeline          */
+ /*------------------------*/
 
 #timeline {
-    scroll-margin-top: 55px;
+    scroll-margin-top: 50px;
 }
 
 .section-tribute-info {
@@ -193,8 +189,6 @@ a:hover img{
     padding-right: 10px;
     padding-left: 10px;
 }
-
-
 
 .section-title h2{
     margin-bottom: 0;
@@ -237,14 +231,14 @@ a:hover img{
     padding: 5px;
 }
 
-/* The actual timeline (the vertical ruler) */
+   /* The  timeline */
+
 .timeline {
     position: relative;
     width: 1140px;
     margin: 0 auto;
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline::after {
     content: '';
     position: absolute;
@@ -256,7 +250,6 @@ a:hover img{
     margin-left: -3px;
 }
 
-/* Container around content */
 .container {
     padding: 10px 40px;
     position: relative;
@@ -264,7 +257,6 @@ a:hover img{
     width: 50%;
 }
 
-/* The circles on the timeline */
 .container::after {
     content: '';
     position: absolute;
@@ -278,17 +270,14 @@ a:hover img{
     z-index: 1;
 }
 
-/* Place the container to the left */
 .left {
     left: 0;
 }
 
-/* Place the container to the right */
 .right {
     left: 50%;
 }
 
-/* Add arrows to the left container (pointing right) */
 .left::before {
     content: " ";
     height: 0;
@@ -302,7 +291,6 @@ a:hover img{
     border-color: transparent transparent transparent white;
 }
 
-/* Add arrows to the right container (pointing left) */
 .right::before {
     content: " ";
     height: 0;
@@ -316,12 +304,10 @@ a:hover img{
     border-color: transparent white transparent transparent;
 }
 
-/* Fix the circle for containers on the right side */
 .right::after {
     left: -16px;
 }
 
-/* The actual content */
 .content {
     padding: 20px 30px;
     background-color: white;
@@ -329,21 +315,18 @@ a:hover img{
     border-radius: 6px;
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
     /* Place the timelime to the left */
     .timeline::after {
         left: 31px;
     }
 
-    /* Full-width containers */
     .container {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
     }
 
-    /* Make sure that all arrows are pointing leftwards */
     .container::before {
         left: 60px;
         border: medium solid white;
@@ -351,12 +334,10 @@ a:hover img{
         border-color: transparent white transparent transparent;
     }
 
-    /* Make sure all circles are at the same spot */
     .left::after, .right::after {
         left: 15px;
     }
 
-    /* Make all right containers behave like the left ones */
     .right {
         left: 0%;
     }
@@ -466,9 +447,9 @@ footer {
     margin: 10px 20px;
     text-decoration: none;
     text-align: left;
-    font-size: 1.1rem;
+    font-size: .9rem;
     text-transform: uppercase;
-    font-weight: normal;
+    font-weight: 700;
 }
 
 img.chesscom,
@@ -486,7 +467,7 @@ footer a:visited {
     margin: 15px 20px;
     text-decoration: none;
     text-align: left;
-    font-size: 1.1rem;
+    font-size: .9rem;
     opacity: 1;
     transition: all .2s ease-out;
     position: relative;
@@ -512,7 +493,7 @@ footer a:active {
 .author {
     margin: 30px 0 20px 0;
     font-weight: normal;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     color: #dee2e6;
 }
 
@@ -618,9 +599,9 @@ footer a:active {
         font-size: 3rem;
     }
 
-    .hero-text-box h3 {
+    /*.hero-text-box h3 {
         font-size: 0.8rem;
-    }
+    }*/
 
     .hero-image {
         width: 75%;
@@ -655,6 +636,9 @@ footer a:active {
 
 /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {
+    body {
+        font-size: 10px;
+    }
     section {
         padding: 0 0 20px 0;
     }
@@ -662,8 +646,6 @@ footer a:active {
     .timeline {
         width: 100%;
     }
-
-
 
     .navbar a:first-child{
         margin-left: 0;
@@ -686,7 +668,8 @@ footer a:active {
     }
 
     iframe {
-        display: none;
+        width: 350px;
+        height: 230px;
     }
 }
 
