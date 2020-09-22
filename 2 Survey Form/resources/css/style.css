@@ -1,0 +1,80 @@
+                           /*    #F4F5F5   sur deschis*/
+
+                           /*#EDEEEE   sur mai inchis putin*/ 
+
+                           /*   #00BF6F   verde placut*/
+
+     /*    General setup   */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+	font-size: 15px;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    background-image: url(/resources/css/img/chess-bg-survey-form.png);
+    background-position: left top;
+    background-position-x: left;
+    background-position-y: top;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-color: #F4F5F5 ;
+    margin-top: 0;
+		}
+
+.row {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+      /*     Header    */
+
+header {
+}
+
+.survey-title {
+	height: 100px;
+	background-color: #00BF6F;
+	text-align: center;
+	width: 100%;
+	color: #fff;
+}      
+
+h1 {
+    margin-top: 35px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    font-weight: 700;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+form {
+	margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+	display: flex;
+	margin-bottom: 0.5rem;
+}
+
+.form-control {
+	width: 100%;
+	padding: 0.3rem 0.7rem;
+}

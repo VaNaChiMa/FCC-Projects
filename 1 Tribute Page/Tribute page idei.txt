@@ -1,0 +1,24 @@
+
+
+
+background    
+           youtube #f9f9f9
+           google  #f6f6f6
+           w3      #f1f1f1
+
+
+
+linii (chenar)
+           google  #DADCE0
+           youtube #E0E0E0
+
+https://abookapart.com/products/mobile-first      idei
+
+
+Intrebari
+=====================================================
+Cum de facut asa footer?
+https://fontawesome.com/cheatsheet   la hover sa apara doar icon, iar textul sa fie din start 
+
+
+cum de combinat navigation scroll jquery cu scroll-margin-top:50px;
