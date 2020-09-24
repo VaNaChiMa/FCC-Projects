@@ -28,8 +28,7 @@ section {
 
 h2 {
     font-weight: 300;
-    font-size: 200%;
-    background-color: #1abc9c;
+    font-size: 200%;                /*background-color: #1abc9c;*/
     color: #fff;                    /*#FBC11A galben*/ /*#008CDB albastru*/
     text-align: center;
     padding: 15px 0;
@@ -146,13 +145,22 @@ header {
     line-height: 145%;
 }
 
+#img-div {
+    max-width: 100%;
+}
+
+#img-caption {
+    opacity: 0;
+}
+
 .hero-image {
     width: 40%;
     margin: 70px 20px 0 20px;
 }
 
 .hero-image img {
-    width: 100%;
+    display:block;
+    max-width: 100%;
     border-radius: 50%;
     border: 5px solid #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
@@ -165,14 +173,13 @@ header {
 
 a:hover img{
     opacity: 1;
-
 }
 
    /*------------------------*/
   /*      Timeline          */
  /*------------------------*/
 
-#timeline {
+#tribute-info {
     scroll-margin-top: 50px;
 }
 
@@ -200,7 +207,17 @@ a:hover img{
     height: 70px;
     text-align: center;
     margin-bottom: 80px;
+    box-shadow: 0 0 0 1px #dddfe2;
+    transition: all .2s ease-out;
 }
+
+.header-king:hover,
+.header-queen:hover,
+.header-rook:hover {
+    box-shadow: 0 1px 8px 5px #dddfe2;
+    text-decoration: none;
+}
+
 
 .header-king {
     height: 70px;
@@ -208,11 +225,6 @@ a:hover img{
     margin-bottom: 80px;
     box-shadow: 0 0 0 1px #dddfe2;
     transition: all .2s ease-out;
-}
-
-.header-king:hover {
-    box-shadow: 0 1px 8px 5px #dddfe2;
-    text-decoration: none
 }
 
 .section-tribute-info h2 {
@@ -286,7 +298,7 @@ a:hover img{
     width: 0;
     z-index: 1;
     right: 30px;
-    /*border: medium solid white;*/
+    border: medium solid white;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
 }
@@ -412,6 +424,12 @@ a:hover img{
     display: inline-block;
 }
 
+iframe {
+    width:750px;
+    height:500px;
+    border:0;
+}
+
 .li-games {
     margin: 0 auto;
     text-align: center;
@@ -452,9 +470,9 @@ footer {
     font-weight: 700;
 }
 
-img.chesscom,
-img.lichess,
-img.chess24 {
+.chesscom,
+.lichess,
+.chess24 {
     height: 20px;
     left: -30px;
     position: absolute;
@@ -503,10 +521,6 @@ footer a:active {
 
 /* Big tablet to 1200px (widths smaller that the 1140px row) */
 @media only screen and (max-width: 1200px) {
-    .row {
-        padding: 0 2%;
-    }
-
     .hero-row {
         align-content: center;
         height: 100%;
@@ -518,7 +532,8 @@ footer a:active {
         height: 100%;
         flex-direction: column;
     }
-    .hero-text-box h1{
+
+    h1 {
         width: 100%;
         padding: 0 2%;
         font-size: 3rem;
@@ -530,7 +545,6 @@ footer a:active {
     .timeline {
         width: 100%;
     }
-    /*width=750 height=500*/
 }
 
 /* Small tablet to big tablet: from 768px to 1023px */
@@ -547,8 +561,8 @@ footer a:active {
         align-items: center;
     }
 
-    .hero-text-box h1 {
-        font-size: 3rem;
+    h1 {
+        font-size: 3rem!important;
     }
 
     .hero-text-box h3 {
@@ -595,13 +609,9 @@ footer a:active {
         width: 100%;
     }
 
-    .hero-text-box h1 {
+    h1 {
         font-size: 3rem;
     }
-
-    /*.hero-text-box h3 {
-        font-size: 0.8rem;
-    }*/
 
     .hero-image {
         width: 75%;
@@ -663,7 +673,7 @@ footer a:active {
         margin-right: 0;
     }
 
-    .hero-text-box h1 {
+    h1 {
         font-size: 1.5rem;
     }
 
