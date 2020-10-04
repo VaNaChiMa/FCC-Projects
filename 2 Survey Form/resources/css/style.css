@@ -1,10 +1,5 @@
-                           /*    #F4F5F5   sur deschis*/
-
-                           /*#EDEEEE   sur mai inchis putin*/ 
-
-                           /*   #00BF6F   verde placut*/
-
-     /*    General setup   */
+                           
+     /*   General setup   */
 
 * {
     margin: 0;
@@ -14,10 +9,10 @@
 
 html,
 body {
-	font-size: 15px;
-    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
     text-rendering: optimizeLegibility;
-    background-image: url(/resources/css/img/chess-bg-survey-form.png);
+    background-image: url("https://i.imgur.com/4e9md4f.png");
     background-position: left top;
     background-position-x: left;
     background-position-y: top;
@@ -26,55 +21,306 @@ body {
     background-attachment: fixed;
     background-color: #F4F5F5 ;
     margin-top: 0;
-		}
+    line-height: 1.5;
+    font-weight: 400;
+        }
 
-.row {
+.container {
     max-width: 750px;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
 }
 
 section {
-    padding: 80px 0;
+    padding: 0 0 80px 0;
 }
 
-      /*     Header    */
+    /*     Header    */
 
 header {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.academy-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #00BF6F;   /*Main color*/
+}      
+
+.name-academy {
+    text-align: left;
+    margin: 0 0 0 15px;
+
+}
+
+.fa-chess {
+    font-size: 75px;
+    color: #fff;
+    text-align: right;
+    margin-right: 15px;
+}
+
+.name-academy h1 {
+    color: #fff;
+    font-size: 200%;
+    font-weight: 900;
+    font-family: "Raleway", Arial, sans-serif;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.name-academy h2 {
+    color: #fff;
+    font-size: 160%;
+    font-weight: 700;
+    font-family: "Raleway", Arial, sans-serif;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    margin: 0;
 }
 
 .survey-title {
-	height: 100px;
-	background-color: #00BF6F;
-	text-align: center;
-	width: 100%;
-	color: #fff;
-}      
-
-h1 {
-    margin-top: 35px;
-    margin-bottom: 20px;
-    color: #fff;
-    font-size: 240%;
-    font-weight: 700;
-    word-spacing: 4px;
+    color: #00BF6F;
+    text-align: center;
+    font-size: 180%;
+    font-weight: 900;
+    font-family: "Raleway", Arial, sans-serif;
+    word-spacing: 3px;
     letter-spacing: 1px;
-    display: inline-block;
+    margin: 30px 0 0 0;
 }
 
+#description {
+    color: #00BF6F;
+    font-size:16px; 
+    font-weight:400;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+    /* FORM */
+
 form {
-	margin: 0 auto;
+    margin: 0 auto;
+    border:thin solid #dadce0;
+    border-radius: 0.5rem;
+    padding: 40px;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    background-color: #fff;
 }
 
 .form-group {
-    margin-bottom: 20px;
-}
-
-label {
-	display: flex;
-	margin-bottom: 0.5rem;
+    margin: 0 auto 1.25rem auto;
+    padding: 0.25rem;
 }
 
 .form-control {
-	width: 100%;
-	padding: 0.3rem 0.7rem;
+    width: 100%;
+    padding: 0.3rem 0.7rem;
 }
+
+label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+}
+
+.question-options label {
+    font-size: 1rem;
+}
+
+input, button, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+input[type=text],
+input[type=email],
+input[type=number] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    transition: all 0.25s;
+    outline: none;
+    border-radius: 3px;
+    color: #202520;
+    background-color:#F5F6F7;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=number]:focus {
+    color: #555;
+    border: 1px solid rgba(82,168,236,0.8);
+    border-color: rgba(82,168,236,0.8);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(82,168,236,0.6);
+}
+
+.input-checkbox,
+.input-radio {
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+    font-size: 1rem;
+}
+
+.input-textarea {
+    min-height: 100px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    resize: vertical;
+    color: #202520;
+    background-color:#F5F6F7;
+    border: 1px solid #aaaaaa;
+    transition: all 0.25s;
+    outline: none;
+}
+
+.input-textarea:focus {
+    color: #555;
+    border: 1px solid rgba(82,168,236,0.8);
+    border-color: rgba(82,168,236,0.8);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(82,168,236,0.6);
+}
+
+select {
+    padding: 5px;
+    border: 1px solid #aaaaaa;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 3px;
+}
+
+p {
+    margin: 0 0 8px 0;
+    font-size: 1.125rem;
+}
+
+.submit-btn {
+    display: block;
+    padding: 0.75rem;
+    background-color: #00BF6F;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    width: 100%;
+    border:1px solid #00BF6F;
+    cursor: pointer;
+}
+
+.fa-chess-board {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: right;
+    margin-right: 20px;
+}
+
+     /*     Footer    */
+
+footer {
+    background-color: #00BF6F;
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 150%;
+    font-weight:700;
+    color: #fff;
+}
+
+footer h3 {
+    padding: 30px 20px;
+    max-width: 750px;
+    text-align: center;
+    margin:0 auto;
+}
+
+.footer-line {
+  display:flex;
+}
+.color1 {
+  width:16.67%;
+  height:5px;
+  background-color:#FFD600;
+}
+.color2 {
+  width:16.67%;
+  height:5px;
+  background-color:#FF700F;
+}
+.color3 {
+  width:16.7%;
+  height:5px;
+  background-color:#FF161F;
+}
+.color4 {
+  width:16.7%;
+  height:5px;
+  background-color:#009164;
+}
+.color5 {
+  width:16.7%;
+  height:5px;
+  background-color:#D31886;
+}
+.color6 {
+ width:16.6%;
+  height:5px;
+  background-color:#005CA3;
+}
+
+
+/*-----------------*/
+/*     Queries     */
+/*-----------------*/
+
+/* Big tablet to 1200px */
+@media only screen and (max-width: 1200px) {
+    .container { padding: 0 2%; }
+    #description {
+    margin: 0 4%;
+    }
+}
+
+/* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1024px) {
+    body { font-size: 1rem; }
+}
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+    body { font-size: 1rem; }
+    .container {padding: 0 4%; }
+    section {
+    padding: 0 0 60px 0;
+    }
+} 
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    .container {
+    margin: 0 auto;
+    }
+
+    section {
+    padding: 0 0 40px 0;
+    }
+    footer {
+    font-size: 120%;
+    font-weight:700;
+    }
+
+    footer h3 {
+    padding: 30px 20px;
+    max-width: 475px;
+    }
+
+}   
