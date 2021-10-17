@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script
+      src="https://kit.fontawesome.com/21155fc47d.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,57 +21,258 @@
     <title>Product Landing Page</title>
   </head>
   <body>
-    <header>
-      <h2><a href="#">Moldova Travel</a></h2>
-      <nav>
-        <li><a href="#">Tours</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </nav>
-    </header>
     <main>
+      <header>
+        <h2><a href="#">Moldova Travel</a></h2>
+        <nav>
+          <li><a href="#">Tours</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </nav>
+      </header>
+
       <section class="hero">
-        <div
-          class="background-image"
-          style="
-            background-image: url('resources/css/img/Orheiul vechi LP.jpg');
-          "
-        ></div>
         <div class="hero-content-area">
           <h1>Moldova Travel</h1>
           <h3>Awesome Adventure Tours in Moldova</h3>
           <a href="#" class="btn">Contact Us Now</a>
         </div>
       </section>
+
       <section class="destinations">
-        <h3 class="title">Some of our destinations:</h3>
+        <h2 class="title">Some of our destinations:</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. At dolores,
           assumenda maxime praesentium delectus alias reprehenderit corrupti hic
           reiciendis et.
         </p>
-        <ul class="grid">
-          <li
-            class="small"
-            style="background-image: url('/resources/css/img/a')"
-          ></li>
-          <li
-            class="large"
-            style="background-image: url('/resources/css/img/b')"
-          ></li>
-          <li
-            class="large"
-            style="background-image: url('/resources/css/img/c')"
-          ></li>
-          <li
-            class="small"
-            style="background-image: url('/resources/css/img/d')"
-          ></li>
-        </ul>
+
+        <hr />
+
+        <div class="pictures">
+          <div class="chisinau">
+            <img src="resources/css/img/Chisinau.jpg" alt="chisinau" />
+            <div class="item_overlay">
+              <div class="title_overlay">Chișinău</div>
+              <div class="description_overlay">
+                <p>Capitala Republicii Moldova</p>
+              </div>
+            </div>
+          </div>
+          <div class="orheiul_vechi">
+            <img
+              src="resources/css/img/Orheiul_vechi.jpg"
+              alt="orheiul_vechi"
+            />
+            <div class="item_overlay">
+              <div class="title_overlay">Orheiul Vechi</div>
+              <div class="description_overlay">
+                <p>Rezervație cultural-naturală</p>
+              </div>
+            </div>
+          </div>
+          <div class="cricova">
+            <img
+              src="resources/css/img/Vinaria_cricova.jpg"
+              alt="Vinaria_cricova"
+            />
+            <div class="item_overlay">
+              <div class="title_overlay">Cricova Winery</div>
+              <div class="description_overlay">
+                <p>Cea mai mare vinărie din Moldova</p>
+              </div>
+            </div>
+          </div>
+          <div class="manastirea_tipova">
+            <img
+              src="resources/css/img/Manastirea_Tipova.jpg"
+              alt="Manastirea_Tipova"
+            />
+            <div class="item_overlay">
+              <div class="title_overlay">Mănăstirea Țipova</div>
+              <div class="description_overlay">
+                <p>Cea mai mare mănăstire ortodoxă stîncoasă din Moldova!</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <section></section>
-      <section></section>
-      <footer></footer>
+
+      <section class="packages">
+        <h2>Tour Packages</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. At dolores,
+          assumenda maxime praesentium delectus alias reprehenderit corrupti hic
+          reiciendis et.
+        </p>
+
+        <hr />
+
+        <div class="trips">
+          <div class="photo_trips">
+            <i class="fas fa-camera"></i>
+            <h3>Photo Trips</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+              commodi doloribus? Nemo ipsam totam quia nesciunt rem cumque
+              ratione delectus!
+            </p>
+          </div>
+
+          <div class="biking_trips">
+            <i class="fas fa-bicycle"></i>
+            <h3>Biking Trips</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+              commodi doloribus? Nemo ipsam totam quia nesciunt rem cumque
+              ratione delectus!
+            </p>
+          </div>
+
+          <div class="guided_trips">
+            <i class="far fa-compass"></i>
+            <h3>Guided Trips</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+              commodi doloribus? Nemo ipsam totam quia nesciunt rem cumque
+              ratione delectus!
+            </p>
+          </div>
+
+          <div class="racing_trips">
+            <i class="fas fa-flag-checkered"></i>
+            <h3>Racing Trips</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+              commodi doloribus? Nemo ipsam totam quia nesciunt rem cumque
+              ratione delectus!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <h2>Testimonials</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. At dolores,
+          assumenda maxime praesentium delectus alias reprehenderit corrupti hic
+          reiciendis et.
+        </p>
+
+        <hr />
+
+        <div class="travelers">
+          <div class="slider-container">
+            <div class="jordan_jensen user show">
+              <img
+                src="resources/css/img/Jordan Jensen.jpg"
+                alt="jordan_jensen"
+              />
+              <h4>Jordan Jensen</h4>
+              <p>
+                Wow! This tour made me realize how much I love Moldova. After
+                going on one of these tours, I can safely say that they are my
+                favorite geographic feature, and my favorite word that starts
+                with M.
+              </p>
+            </div>
+
+            <div class="jeanne_murray user">
+              <img
+                src="resources/css/img/Jeanne Murray.jpg"
+                alt="jeanne_murray"
+              />
+              <h4>Jeanne Murray</h4>
+              <p>
+                I never understood why people cared so much about Moldova. But
+                then I went on one of these tours. Now I can't understand people
+                who don't care about Moldova!
+              </p>
+            </div>
+
+            <div class="serenity_grant user">
+              <img
+                src="resources/css/img/Serenity Grant.jpg"
+                alt="Serenity Grant"
+              />
+              <h4>Serenity Grant</h4>
+              <p>
+                If you want to understand the universe, head to the Moldova. I
+                mean, seriously. It's like, woah. You know? It's like that..
+              </p>
+            </div>
+
+            <div class="bob_jackson user">
+              <img src="resources/css/img/Bob Jackson.jpg" alt="bob_jackson" />
+              <h4>Bob Jackson</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laborum, odio.
+              </p>
+            </div>
+
+            <div class="shelly_marshall user">
+              <img
+                src="resources/css/img/Shelly Marshall.jpg"
+                alt="shelly_marshall"
+              />
+              <h4>Shelly Marshall</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laborum, odio.
+              </p>
+            </div>
+
+            <div class="controls">
+              <button id="prev"><i class="fas fa-arrow-left"></i></button>
+              <button id="next"><i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="learn_more">
+        <h2>Learn More</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. At dolores,
+          assumenda maxime praesentium delectus alias reprehenderit corrupti hic
+          reiciendis et.
+        </p>
+
+        <hr />
+      </section>
+
+      <footer>
+        <div class="footer">
+          <div class="logo_box">
+            <h2><a href="#">Moldova Travel</a></h2>
+            <div class="social">
+              <a href="https://twitter.com/"
+                ><i class="fab fa-twitter-square"></i
+              ></a>
+              <a href="https://facebook.com/"
+                ><i class="fab fa-facebook-square"></i
+              ></a>
+              <a href="https://youtube.com/"
+                ><i class="fab fa-youtube-square"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-row">
+            <p class="author">
+              Create with <i class="fas fa-heart"></i> in beautiful Chișinău,
+              Moldova.
+            </p>
+            <small
+              >@ 2021 by
+              <a href="https://github.com/VaNaChiMa">Vanachima</a>.</small
+            >
+          </div>
+        </div>
+      </footer>
     </main>
+
+    <script src="resources/js/script.js"></script>
   </body>
 </html>

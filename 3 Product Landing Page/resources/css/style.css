@@ -8,30 +8,13 @@
 
 html {
     font: normal 16px sans-serif;
-    color: #555;
 }
 
-nav {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    opacity: 0.75;
-    color: #fff;
-}
-
-a:hover {
-    opacity: 1;
-}
-
-a.btn {
-    border-radius: 4px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    background-color: blueviolet;
-    opacity: 1;
+main {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
 }
 
 section {
@@ -41,6 +24,34 @@ section {
     padding: 100px 80px;
 }
 
+section:nth-of-type(odd) {
+    background-color: #f5f5f5;
+}
+
+section h2 {
+    margin-bottom: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #555;
+}
+
+section p {
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 750px;
+    line-height: 2;
+}
+
+hr {
+    width: 250px;
+    height: 3px;
+    color: #00adef;
+    background-color: #00adef;
+    margin-bottom: 70px;
+    border: none;
+    border-radius: 50px;
+}
 
 /*    Header     */
 
@@ -50,10 +61,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 35px 100px 0;
+    height: 70px;
+    padding: 0 100px;
     animation: 1s fadein 0.5s forwards;
     opacity: 0;
     color: #fff;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 @keyframes fadein {
@@ -69,10 +83,21 @@ header h2 {
 header nav {
     display: flex;
     margin-right: -15px;
+    list-style: none;
 }
 
 header nav li {
     margin: 0 15px;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.25s ease;
+}
+
+header a:hover {
+    color: #00adef;
 }
 
 /*   Hero section   */
@@ -80,38 +105,53 @@ header nav li {
 .hero {
     position: relative;
     justify-content: center;
-    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
     text-align: center;
     color: #fff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/resources/css/img/River_Nistru_Hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
 }
 
-.hero .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: cover;
-    z-index: -1;
-    background-color: chartreuse;
-}
 
 .hero h1 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 60px;
-    font-weight: bold;
+    font-size: 55px;
     margin-bottom: 15px;
+    letter-spacing: 10px;
 }
 
 .hero h3 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 40px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 80px;
+    letter-spacing: 2px;
 }
 
-.hero a.btn {
-    padding: 20px 46px;
+.hero a {
+    padding: 20px 45px;
+    border-radius: 50px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    background: #fff; 
+    color: #777;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.25s ease;
+}
+
+.hero a:hover {
+    background-color: #00adef;
+    color: #fff;
+    transform: scale(0.98);
+}
+
+.hero a:active {
+    transform: translateY(2px);
 }
 
 .hero-content-area {
@@ -125,4 +165,332 @@ header nav li {
         opacity: 1;
         margin: 0;
     }
+}
+
+.destinations {
+    animation: 1s fadein 0.5s forwards;
+    padding: 100px 0;
+}
+
+.pictures {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 20vw);
+    grid-gap: 5px;
+
+}
+
+.pictures > div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chisinau {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    position: relative;
+}
+
+/* .chisinau::after {
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+} */
+
+.orheiul_vechi {
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    position: relative;
+}
+
+.cricova {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    position: relative;
+}
+
+.manastirea_tipova {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    position: relative;
+}
+
+.item_overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 30px;
+    height: 50px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.title_overlay {
+    margin-bottom: 17px;
+}
+
+.description_overlay p {
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-bottom: 2.2rem;
+    line-height: normal;
+}
+
+.item_overlay:hover {
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 20px;
+}
+
+.description_overlay {
+    opacity: 1;
+}
+
+/*     Packages     */
+
+.trips {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.photo_trips, .biking_trips,
+.guided_trips, .racing_trips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+
+.trips i {
+    color: #00adef;
+    font-size: 4rem;
+    transition: all 0.3s ease;
+}
+
+.trips i:hover {
+    transform: scale(1.2) rotate(-360deg);
+}
+
+.trips p {
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.trips h3 {
+    margin: 25px 0;
+}
+
+/*     Testimonials     */
+
+.testimonials {
+    background: rgb(0,173,239);
+    background: linear-gradient(64deg, rgba(42,245,152,1) 0%, rgba(0,173,239,1) 100%);
+    color: #f9fafa;
+}
+
+.testimonials h2 {
+    color: #f9fafa;
+}
+
+.testimonials hr {
+    background-color: #f9fafa;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.travelers img {
+    border-radius: 50%;
+}
+
+.slider-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-container .user {
+    display: none;
+    margin: auto;
+    border-radius: 8px;
+    height: 330px;
+    width: 400px;
+  }
+
+.slider-container .user h4 {
+   padding-top: 20px;
+}
+
+  .slider-container .user p {
+      padding: 20px 20px 0 20px;
+      width: 350px;
+      line-height: normal;
+      margin-bottom: 0;
+  }
+
+  .slider-container .user.show {
+      display: flex;
+  }
+
+  
+  button {
+    display: block;
+    padding: 10px 30px;
+    color: #00c09d;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+    border: 0;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  button:hover {
+    color: #00c09d;
+    background: #fff;
+    opacity: 0.9;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  .slider-container {
+    position: relative;
+    z-index: 50;
+  }
+  
+  .controls #prev {
+    position: absolute;
+    top: 50%;
+    left: -70px;
+    transform: translate(-50%);
+    z-index: -1;
+  }
+  .controls #next {
+    position: absolute;
+    top: 50%;
+    right: -150px;
+    transform: translate(-50%);
+    z-index: -1;
+  }
+  
+  .controls button i {
+    font-size: 1.5rem;
+  }
+
+/*     Footer     */
+
+footer {
+    background-color: #fff;
+    color: #555;
+    padding: 50px;
+}
+
+footer h2 {
+    padding: 30px;
+}
+
+footer h2 a {
+    color: #00adef;
+    text-decoration: none;
+}
+
+.logo_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_box h2 {
+    transition: all 0.25s ease;
+}
+
+.logo_box h2:hover {
+    transform: scale(1.2) rotate(-5deg);
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social i {
+    margin-right: 10px;
+    font-size: 2rem;
+    color: #999;
+    transition: all 0.25s ease;
+}
+
+.social i:hover {
+    transform: scale(1.1) rotate(360deg);
+}
+
+.social .fa-facebook-square:hover {
+    color: #1778f2;
+}
+.social .fa-twitter-square:hover {
+    color: #1C9CEA;
+}
+.social .fa-youtube-square:hover {
+    color:#FF0000;
+}
+
+
+.social i:before {
+    display: inline;
+  }
+
+.footer-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.footer-row p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+}
+
+.footer-row small {
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+}
+
+.author i {
+    color: #ff0000;
+}
+
+footer small a {
+    text-decoration: none;
+    color: #00adef;
+    font-weight: 700;
 }
