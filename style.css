@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #008060;
+}
+
+main {
+    max-width: 1440px;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+}
+
+.logo {
+    width: 55%;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.container h1 {
+    font-size: 3.75rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.container ol {
+    color: #fff;
+}
+
+.container li {
+    padding-left: 5px;
+}
+
+.container a {
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container h1 {
+        font-size: 2srem;
+        margin-bottom: 40px;
+    }
+}
+    
+
