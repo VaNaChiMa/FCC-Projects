@@ -12,7 +12,7 @@ body {
     font-size: 16px;
     font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
     text-rendering: optimizeLegibility;
-    background-image: url("https://i.imgur.com/4e9md4f.png");
+    background-image: url("img/chess-bg-survey-form.png");
     background-position: left top;
     background-position-x: left;
     background-position-y: top;
@@ -107,11 +107,11 @@ header {
 
 form {
     margin: 0 auto;
-    border:thin solid #dadce0;
     border-radius: 0.5rem;
     padding: 40px;
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
     background-color: #fff;
+    border:thin solid #dadce0;
 }
 
 .form-group {
@@ -144,9 +144,8 @@ input, button, select, textarea {
 
 input[type=text],
 input[type=email],
-input[type=number] {
-    width: 100%;
-    padding: 10px;
+input[type=number],
+select {
     border: 1px solid #aaaaaa;
     transition: all 0.25s;
     outline: none;
@@ -157,7 +156,8 @@ input[type=number] {
 
 input[type=text]:focus,
 input[type=email]:focus,
-input[type=number]:focus {
+input[type=number]:focus,
+select:focus {
     color: #555;
     border: 1px solid rgba(82,168,236,0.8);
     border-color: rgba(82,168,236,0.8);
@@ -193,14 +193,6 @@ input[type=number]:focus {
     box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(82,168,236,0.6);
 }
 
-select {
-    padding: 5px;
-    border: 1px solid #aaaaaa;
-    transition: 0.5s;
-    outline: none;
-    border-radius: 3px;
-}
-
 p {
     margin: 0 0 8px 0;
     font-size: 1.125rem;
@@ -208,16 +200,28 @@ p {
 
 .submit-btn {
     display: block;
-    padding: 0.75rem;
+    position: relative;
+    padding: 0.75rem 3rem;
     background-color: #00BF6F;
     text-align: center;
     color: #fff;
     font-size: 1.5rem;
-    border-radius: 3px;
-    width: 100%;
-    border:1px solid #00BF6F;
+    border-radius: 10px;
+    outline:none;
+    border:none;
     cursor: pointer;
+    margin: 0 auto;
+    box-shadow: 0 3px #009959;
 }
+
+.submit-btn:hover {
+    background-color: #00b368;
+}
+
+.submit-btn:active {
+  box-shadow: none;
+  top: 3px;
+} 
 
 .fa-chess-board {
     font-size: 1.5rem;
@@ -234,18 +238,60 @@ footer {
     font-size: 150%;
     font-weight:700;
     color: #fff;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
 }
 
-footer h3 {
-    padding: 30px 20px;
-    max-width: 750px;
+.footer-rightside{
+    margin: 25px 100px 25px 0;
+}
+
+.footer-leftside{
+    margin: 25px 0 25px 100px;
+}
+
+.footer-leftside .fa-chess{
+    transform: rotate(-10deg);
+    transition: transform 0.2s ease-out;
+}
+
+.footer-leftside .fa-chess:hover {
+    transform: scale(1.2) rotate(0deg);
+}
+
+.footer-rightside p {
+    color: #fff;
+    font-size: 70%;
+    font-weight: 200;
+    font-family: Open Sans;
     text-align: center;
-    margin:0 auto;
+}
+
+.footer-leftside .fa-chess {
+    font-size: 50px;
+}
+
+a .fa-facebook-square,
+a .fa-instagram-square,
+a .fa-twitter-square {
+    color: #f5f5f5;
+    transition: all 0.3s ease;
+}
+
+a .fa-facebook-square:hover,
+a .fa-instagram-square:hover,
+a .fa-twitter-square:hover {
+    color: #fff;
+    transform: scale(1.1) rotate(360deg);
 }
 
 .footer-line {
   display:flex;
 }
+
 .color1 {
   width:16.67%;
   height:5px;
@@ -307,7 +353,7 @@ footer h3 {
 /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {
     .container {
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
     }
 
     section {
@@ -318,9 +364,12 @@ footer h3 {
     font-weight:700;
     }
 
-    footer h3 {
-    padding: 30px 20px;
-    max-width: 475px;
+    .footer-rightside{
+    margin: 30px 50px 30px 0;
+    }
+
+    .footer-leftside {
+    margin: 30px 0 30px 50px;
     }
 
 }   

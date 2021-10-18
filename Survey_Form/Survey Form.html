@@ -1,143 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-	<link rel="stylesheet" type="text/css" href="resources/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@900&display=swap" rel="stylesheet">
-	
-	<title>Survey Form</title>
-		
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@900&display=swap"
+      rel="stylesheet"
+    />
 
-	<header>
-		<div class="academy-title">
-			<i class="fas fa-chess"></i>
-			<div class="name-academy">
-				<h1 id="title">Vademecum</h1>
-				<h2>Chess Academy</h2>
-	        </div>
-	    </div>
-	    <h3 class="survey-title">Survey Form</h3>
-			<p id="description">Thank you for taking the time to help us improve the academy</p>    
-	</header>
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
 
-			<div class="container">
-			    <form class="survey-form" id="survey-form">
+    <title>Survey Form</title>
+  </head>
 
-			    	<div class="form-group">
-						   <label id="name-label">Name</label>
-					       <input type="text" name="Name" class="form-control" placeholder="Enter your name" required="" id="name">
-					</div>
+  <body>
+    <header>
+      <div class="academy-title">
+        <i class="fas fa-chess"></i>
+        <div class="name-academy">
+          <h1 id="title">Vademecum</h1>
+          <h2>Chess Academy</h2>
+        </div>
+      </div>
+      <h3 class="survey-title">Survey Form</h3>
+      <p id="description">
+        Thank you for taking the time to help us improve the academy
+      </p>
+    </header>
 
-					<div class="form-group">
-						<label id="email-label" for="email">Email</label>
-						       <input type="email" name="email" class="form-control" placeholder="Enter your email" required="" id="email"><br>
-				    </div>
+    <div class="container">
+      <form class="survey-form" id="survey-form">
+        <div class="form-group">
+          <label id="name-label">Name</label>
+          <input
+            type="text"
+            name="Name"
+            class="form-control"
+            placeholder="Enter your name"
+            required=""
+            id="name"
+          />
+        </div>
 
-		        <div class="form-group">
-		        	<label id="number-label" for="number">Age</label>
-		        	<input type="number" name="age" id="number" min="4" max="99" class="form-control" placeholder="Age" required="">
-		        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter your email"
+            required=""
+            id="email"
+          /><br />
+        </div>
 
-		       <div class="form-group ">
-		       	    <p>How frequently do you play in chess tournaments?</p>
-		               <select id="dropdown" class="form-control">
-		               	<option value="0">Less than one tournament per year</option>
-		               	<option value="1" selected>One tournament per year</option>
-		               	<option value="2">Two tournaments per year</option>
-		               	<option value="3 - 5">Three - five tournaments per year</option>
-		               	<option value="6 - 9">Six - nine tournaments per year</option>
-		               	<option value="10 - more">Ten or more tournaments per year</option>
-		               </select>
-		       </div>
+        <div class="form-group">
+          <label id="number-label" for="number">Age</label>
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="4"
+            max="99"
+            class="form-control"
+            placeholder="Age"
+            required=""
+          />
+        </div>
 
-		       <div class="form-group">
-		       	    <p>What is your chess level?</p>
-				       	<select class="form-control">
-				       		<option selected="">Beginner</option>
-				       		<option>Intermediate</option>
-				       		<option>Expert</option>
-				       		<option>Master</option>
-				       	</select>
-		       </div>
+        <div class="form-group">
+          <p>How frequently do you play in chess tournaments?</p>
+          <select id="dropdown" class="form-control">
+            <option value="0">Less than one tournament per year</option>
+            <option value="1" selected>One tournament per year</option>
+            <option value="2">Two tournaments per year</option>
+            <option value="3 - 5">Three - five tournaments per year</option>
+            <option value="6 - 9">Six - nine tournaments per year</option>
+            <option value="10 - more">Ten or more tournaments per year</option>
+          </select>
+        </div>
 
-		       	<div class="form-group">
-		       		<p>What is your rating elo?</p>
-		       		<select class="form-control">
-		       			<option>&lt;1000</option>
-		       			<option>1000-1200</option>
-		       			<option selected="">1201-1400</option>
-		       			<option>1401-1600</option>
-		       			<option>1601-1800</option>
-		       			<option>1801-2000</option>
-		       			<option>2200-2400</option>
-		       			<option>&gt;2400</option>
-		       		</select>
-		       	</div> 
+        <div class="form-group">
+          <p>What is your chess level?</p>
+          <select class="form-control">
+            <option selected="">Beginner</option>
+            <option>Intermediate</option>
+            <option>Expert</option>
+            <option>Master</option>
+          </select>
+        </div>
 
-		       	<div class="form-group question-options">
-		       		<p>What would you like to see improved?</p>
-	                    <label><input type="checkbox" name="general" value="general" class="input-checkbox"> General understanding of chess<br></label>
-	                    <label><input type="checkbox" name="Tactics" value="Tactics" class="input-checkbox"> Tactics<br></label>
-	                    <label><input type="checkbox" name="Strategy" value="Strategy" checked="" class="input-checkbox"> Strategy<br></label>
-	                    <label><input type="checkbox" name="Calculation" value="Calculation" class="input-checkbox"> Calculation<br></label>
-	                    <label><input type="checkbox" name="Opening" value="Opening" class="input-checkbox"> Opening<br></label>
-	                    <label><input type="checkbox" name="Middelgame" value="Middelgame" class="input-checkbox"> Middelgame<br></label>
-	                    <label><input type="checkbox" name="Endgames" value="Endgames" class="input-checkbox"> Endgames<br></label>
-	                    <label><input type="checkbox" name="other" value="other" class="input-checkbox"> Other<br></label>
-		       	</div>  
+        <div class="form-group">
+          <p>What is your rating elo?</p>
+          <select class="form-control">
+            <option>&lt;1000</option>
+            <option>1000-1200</option>
+            <option selected="">1201-1400</option>
+            <option>1401-1600</option>
+            <option>1601-1800</option>
+            <option>1801-2000</option>
+            <option>2200-2400</option>
+            <option>&gt;2400</option>
+          </select>
+        </div>
 
-		        <div class="form-group">
-		        	<p>What is your favorit playzone on the internet?</p>
-		        	<select class="form-control">
-		        		<option>chess.com</option>
-		        		<option selected="">licess.org</option>
-		        		<option>chess24.com</option>
-		        		<option>chessclub.com</option>
-		        		<option>other</option>
-		        	</select>
-		        </div>
+        <div class="form-group question-options">
+          <p>What would you like to see improved?</p>
+          <label
+            ><input
+              type="checkbox"
+              name="general"
+              value="general"
+              class="input-checkbox" />
+            General understanding of chess<br
+          /></label>
+          <label
+            ><input
+              type="checkbox"
+              name="Tactics"
+              value="Tactics"
+              class="input-checkbox" />
+            Tactics<br
+          /></label>
+          <label
+            ><input
+              type="checkbox"
+              name="Strategy"
+              value="Strategy"
+              checked=""
+              class="input-checkbox" />
+            Strategy<br
+          /></label>
+          <label
+            ><input
+              type="checkbox"
+              name="Calculation"
+              value="Calculation"
+              class="input-checkbox" />
+            Calculation<br
+          /></label>
+          <label
+            ><input
+              type="checkbox"
+              name="Opening"
+              value="Opening"
+              class="input-checkbox" />
+            Opening<br
+          /></label>
+          <label
+            ><input
+              type="checkbox"
+              name="Middelgame"
+              value="Middelgame"
+              class="input-checkbox" />
+            Middelgame<br
+          /></label>
+          <label
+            ><input
+              type="checkbox"
+              name="Endgames"
+              value="Endgames"
+              class="input-checkbox" />
+            Endgames<br
+          /></label>
+          <label
+            ><input
+              type="checkbox"
+              name="other"
+              value="other"
+              class="input-checkbox" />
+            Other<br
+          /></label>
+        </div>
 
-		        <div class="form-group question-options">
-                    <p>Would you recommend Vademecum ChessAcademy to a friend?</p>
-                    <label><input name="user-recommend" value="definitely" type="radio" checked="" class="input-radio">Definitely</label>
-                    <label><input name="user-recommend" value="maybe" type="radio" class="input-radio">Maybe</label>
-                    <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio">Not sure</label>
-                </div>
+        <div class="form-group">
+          <p>What is your favorit playzone on the internet?</p>
+          <select class="form-control">
+            <option>chess.com</option>
+            <option selected="">licess.org</option>
+            <option>chess24.com</option>
+            <option>chessclub.com</option>
+            <option>other</option>
+          </select>
+        </div>
 
-                <div class="form-group">
-	                <label>Any comments or suggestions?</label>
-	                <textarea placeholder="Enter your comment here..." class="input-textarea"></textarea>
-	            </div>    
-            
-			    <div>
-			    	<button class="submit-btn" id="submit"><i class="fas fa-chess-board fa-spin"></i>Submit</button>
-			    </div>
+        <div class="form-group question-options">
+          <p>Would you recommend Vademecum ChessAcademy to a friend?</p>
+          <label
+            ><input
+              name="user-recommend"
+              value="definitely"
+              type="radio"
+              checked=""
+              class="input-radio"
+            />Definitely</label
+          >
+          <label
+            ><input
+              name="user-recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"
+            />Maybe</label
+          >
+          <label
+            ><input
+              name="user-recommend"
+              value="not-sure"
+              type="radio"
+              class="input-radio"
+            />Not sure</label
+          >
+        </div>
 
-	</form>
+        <div class="form-group">
+          <label>Any comments or suggestions?</label>
+          <textarea
+            placeholder="Enter your comment here..."
+            class="input-textarea"
+          ></textarea>
+        </div>
 
-			</div>
+        <div>
+          <button class="submit-btn" id="submit">
+            <i class="fas fa-chess-board fa-spin"></i>Submit
+          </button>
+        </div>
+      </form>
+    </div>
 
-		<footer>
-			<h3>Vademecum Chess Academy</h3>
-			<div class="footer-line">
-				  <div class="color1"></div>
-				  <div class="color2"></div>
-				  <div class="color3"></div>
-				  <div class="color4"></div>
-				  <div class="color5"></div>
-				  <div class="color6"></div>
-		    </div>
-		</footer>
+    <div class="footer-line">
+      <div class="color1"></div>
+      <div class="color2"></div>
+      <div class="color3"></div>
+      <div class="color4"></div>
+      <div class="color5"></div>
+      <div class="color6"></div>
+    </div>
+    <footer>
+      <div class="footer-rightside">
+        <p>Follow us!</p>
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-instagram-square"></i></a>
+        <a href="#"><i class="fab fa-twitter-square"></i></a>
+      </div>
+      <div class="footer-leftside">
+        <i class="fas fa-chess"></i>
+      </div>
+    </footer>
 
-
-
-    <script src="https://kit.fontawesome.com/21155fc47d.js" crossorigin="anonymous"></script>
-	
-</body>
+    <script
+      src="https://kit.fontawesome.com/21155fc47d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
