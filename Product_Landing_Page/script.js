@@ -37,3 +37,17 @@ function removeActiveClasses() {
         user.classList.remove('show')
     })
 }
+
+// Navigation
+
+const hamburger = document.querySelector('.hamburger')
+const hero = document.querySelector('.hero')
+const navigation = document.querySelector('.navLinks')
+const header = document.querySelector('header')
+
+hamburger.addEventListener('click', () => {
+  hero.classList.toggle('active')
+  navigation.classList.toggle('active')
+  header.classList.toggle('active')
+  hamburger.classList.toggle('active')
+})
