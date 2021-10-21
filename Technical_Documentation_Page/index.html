@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="resources/css/normalize.css" />
+    <script
+      src="https://kit.fontawesome.com/21155fc47d.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
 
     <title>Technical Documentation Page</title>
@@ -13,59 +17,66 @@
   <body>
     <header>
       <div class="topHeader">
-        <img src="/resources/css/img/fide-logo.svg" alt="fide-logo" />
+        <img src="resources/img/fide-logo.svg" alt="fide-logo" />
         <h1>FIDE LAWS of CHESS</h1>
       </div>
+      <div class="hamburger">
+        <div class="line line_1"></div>
+        <div class="line line_2"></div>
+        <div class="line line_3"></div>
+      </div>
     </header>
-    <div class="mainContent">
+    <div class="container">
       <nav id="navbar">
         <ul>
           <li>
-            <a href="#art1">The nature and objectives of the game of chess</a>
+            <a href="#art1" class="nav-link"
+              >The nature and objectives of the game of chess</a
+            >
           </li>
           <li>
-            <a href="#art2"
+            <a href="#art2" class="nav-link"
               >The initial position of the pieces on the chessboard</a
             >
           </li>
           <li>
-            <a href="#art3">The moves of the pieces </a>
+            <a href="#art3" class="nav-link">The moves of the pieces </a>
           </li>
           <li>
-            <a href="#art4">The act of moving the pieces</a>
+            <a href="#art4" class="nav-link">The act of moving the pieces</a>
           </li>
           <li>
-            <a href="#art5">The completion of the game</a>
+            <a href="#art5" class="nav-link">The completion of the game</a>
           </li>
           <li>
-            <a href="#art6">The chess clock</a>
+            <a href="#art6" class="nav-link">The chess clock</a>
           </li>
           <li>
-            <a href="#art7">Irregularities</a>
+            <a href="#art7" class="nav-link">Irregularities</a>
           </li>
           <li>
-            <a href="#art8">The recording of the moves</a>
+            <a href="#art8" class="nav-link">The recording of the moves</a>
           </li>
           <li>
-            <a href="#art9">The drawn game</a>
+            <a href="#art9" class="nav-link">The drawn game</a>
           </li>
           <li>
-            <a href="#art10">Quickplay finish</a>
+            <a href="#art10" class="nav-link">Quickplay finish</a>
           </li>
           <li>
-            <a href="#art11">Points</a>
+            <a href="#art11" class="nav-link">Points</a>
           </li>
           <li>
-            <a href="#art12">The conduct of the players</a>
+            <a href="#art12" class="nav-link">The conduct of the players</a>
           </li>
           <li>
-            <a href="#art13">The role of the arbiter</a>
+            <a href="#art13" class="nav-link">The role of the arbiter</a>
           </li>
           <li>
-            <a href="#art14">FIDE</a>
+            <a href="#art14" class="nav-link">FIDE</a>
           </li>
           <li>
-            <a href="#art15">Reference</a>
+            <a href="#art15" class="nav-link">Reference</a>
           </li>
         </ul>
       </nav>
@@ -182,7 +193,7 @@
             </p>
             <img
               class="oneImage"
-              src="/resources/css/img/pos1.png"
+              src="resources/img/pos1.png"
               alt="chessboard"
             />
             <p>
@@ -213,29 +224,17 @@
               The bishop may move to any square along a diagonal on which it
               stands.
             </p>
-            <img
-              class="oneImage"
-              src="/resources/css/img/pos2.png"
-              alt="bishop"
-            />
+            <img class="oneImage" src="resources/img/pos2.png" alt="bishop" />
             <p>
               The rook may move to any square along the file or the rank on
               which it stands.
             </p>
-            <img
-              class="oneImage"
-              src="/resources/css/img/pos3.png"
-              alt="rook"
-            />
+            <img class="oneImage" src="resources/img/pos3.png" alt="rook" />
             <p>
               The queen may move to any square along the file, the rank or a
               diagonal on which it stands.
             </p>
-            <img
-              class="oneImage"
-              src="/resources/css/img/pos4.png"
-              alt="queen"
-            />
+            <img class="oneImage" src="resources/img/pos4.png" alt="queen" />
             <p>
               When making these moves the bishop, rook or queen may not move
               over any intervening pieces.
@@ -244,11 +243,7 @@
               The knight may move to one of the squares nearest to that on which
               it stands but not on the same rank, file or diagonal.
             </p>
-            <img
-              class="oneImage"
-              src="/resources/css/img/pos5.png"
-              alt="knight"
-            />
+            <img class="oneImage" src="resources/img/pos5.png" alt="knight" />
             <p>
               The pawn may move forward to the unoccupied square immediately in
               front of it on the same file, or on its first move the pawn may
@@ -258,11 +253,7 @@
               diagonally in front of it on an adjacent file, capturing that
               piece.
             </p>
-            <img
-              class="oneImage"
-              src="/resources/css/img/pos6.png"
-              alt="pawns"
-            />
+            <img class="oneImage" src="resources/img/pos6.png" alt="pawns" />
             <p>
               A pawn attacking a square crossed by an opponent’s pawn which has
               advanced two squares in one move from its original square may
@@ -270,11 +261,7 @@
               only one square. This capture is only legal on the move following
               this advance and is called an ‘en passant’ capture.
             </p>
-            <img
-              class="oneImage"
-              src="/resources/css/img/pos7.png"
-              alt="pawns"
-            />
+            <img class="oneImage" src="resources/img/pos7.png" alt="pawns" />
             <p>
               When a pawn reaches the rank furthest from its starting position
               it must be exchanged as part of the same move on the same square
@@ -288,11 +275,7 @@
               adjoining square not attacked by one or more of the opponent’s
               pieces
             </p>
-            <img
-              class="oneImage"
-              src="/resources/css/img/pos8.png"
-              alt="king"
-            />
+            <img class="oneImage" src="resources/img/pos8.png" alt="king" />
             <p>
               or by ‘castling’. This is a move of the king and either rook of
               the same colour along the player’s first rank, counting as a
@@ -303,14 +286,14 @@
             </p>
             <div class="figuresRow">
               <figure>
-                <img src="/resources/css/img/pos9.png" alt="before castling" />
+                <img src="resources/img/pos9.png" alt="before castling" />
                 <figcaption>
                   Before white kingside castling<br />Before black queenside
                   castling
                 </figcaption>
               </figure>
               <figure>
-                <img src="/resources/css/img/pos11.png" alt="after castling" />
+                <img src="resources/img/pos11.png" alt="after castling" />
                 <figcaption>
                   After white kingside castling<br />After black queenside
                   castling
@@ -319,14 +302,14 @@
             </div>
             <div class="figuresRow">
               <figure>
-                <img src="/resources/css/img/pos10.png" alt="before castling" />
+                <img src="resources/img/pos10.png" alt="before castling" />
                 <figcaption>
                   Before white queenside castling<br />Before black kingside
                   castling
                 </figcaption>
               </figure>
               <figure>
-                <img src="/resources/css/img/pos12.png" alt="after castling" />
+                <img src="resources/img/pos12.png" alt="after castling" />
                 <figcaption>
                   After white queenside castling<br />After black kingside
                   castling
@@ -917,6 +900,9 @@
           </article>
         </section>
       </main>
+      <button class="scrollUp" title="Go to top">
+        <i class="fas fa-angle-up"></i>
+      </button>
     </div>
 
     <script src="resources/js/script.js"></script>
