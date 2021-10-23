@@ -23,30 +23,6 @@ function removeActiveClasses() {
             })
 }
 
-// Scroll button
-
-var scrollButton = document.querySelector(".scrollUp");
-
-scrollButton.addEventListener('click', () => {
-  topFunction()
-  
-} )
-
-window.onscroll = function() {scrollFunction()}
-
-function scrollFunction() {
-  if (document.body.scrollTop > 640 || document.documentElement.scrollTop > 640) {
-    scrollButton.style.display = "block";
-  } else {
-    scrollButton.style.display = "none";
-  }
-}
-
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
 // Navigation
 
 const hamburger = document.querySelector('.hamburger')
@@ -63,4 +39,27 @@ nav_link.addEventListener('click', () => {
     navigation.classList.toggle('active')
   })
 })
+
+// Scroll button
+
+var scrollButton = document.querySelector(".scrollUp");
+
+scrollButton.addEventListener('click', () => {
+  topFunction()
+})
+
+document.querySelector('#main-doc').onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.querySelector('#main-doc').scrollTop > 330 || document.documentElement.scrollTop > 330) {
+    scrollButton.style.display = "block";
+  } else {
+    scrollButton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  // document.body.scrollTop = 0;
+  document.querySelector('#main-doc').scrollTop = 0;
+}
 
