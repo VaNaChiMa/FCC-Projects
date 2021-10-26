@@ -45,6 +45,12 @@ header .topHeader {
     align-items: center;
 }
 
+.topHeader a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
 .topHeader h1 {
     margin-left: 30px;
     font-size: 1.5rem;
@@ -61,7 +67,16 @@ header .topHeader {
     cursor: pointer;
 }
 
-.line {
+.hamburger i {
+    font-size: 1.5rem;
+    transition: 0.25s ease;
+}
+
+.hamburger i:hover {
+    font-size: 1.725rem;
+}
+
+/* .line {
     height: 2px;
     background-color: #fff;
     width: 24px;
@@ -75,7 +90,7 @@ header .topHeader {
 
 .hamburger:hover .line_3 {
     transform: translateY(1px);
-}
+} */
 
 #navbar {
     height: calc(100vh - 70px);
@@ -137,7 +152,15 @@ section {
     font-weight: 500;
 } 
 
-#main-doc header {
+.one_header {
+    display: none;
+}
+
+code {
+    display: none;
+}
+
+#main-doc h2 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 2rem;
@@ -161,17 +184,25 @@ section {
 
 .pieces_symbols {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 300px;
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.pieces_symbols div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .chessPieces {
     display: inline-block;
     font-weight: 500;
     font-size: 2rem;
-    vertical-align: middle;
-    padding-left: 20px;
 }
 
 .oneImage {
@@ -271,7 +302,6 @@ section {
     }
   }
 
-
 @media screen and (max-width: 1024px) {
 
     .container {
@@ -313,7 +343,6 @@ section {
         color: #fff;
         font-weight: 500;
     } 
-    
 
     #navbar.active {
         display: block;
@@ -339,7 +368,7 @@ section {
         line-height: 1.5;
     }
 
-    #main-doc header {
+    #main-doc h2 {
         font-size: 1.7rem;
     }
 
@@ -370,7 +399,7 @@ section {
     #main-doc {
         padding: 20px;
     }
-    #main-doc header {
+    #main-doc h2 {
         font-size: 1.5rem;
     }
 
@@ -392,16 +421,17 @@ section {
         font-size: 1.2rem;
     }
 
-    /* #main-doc .pieces_symbols p {
-        font-size: 0.8rem;
-    } */
-
 }
 
 @media screen and (max-width: 375px) {
 
     .topHeader h1 {
         font-size: 1rem;
+        margin-left: 10px;
+    }
+
+    .hamburger {
+        right: 20px;
     }
 
 }

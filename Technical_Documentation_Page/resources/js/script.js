@@ -59,7 +59,6 @@ function scrollFunction() {
 }
 
 function topFunction() {
-  // document.body.scrollTop = 0;
   document.querySelector('#main-doc').scrollTop = 0;
 }
 
