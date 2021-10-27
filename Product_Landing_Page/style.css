@@ -134,7 +134,7 @@ header a:hover {
     width: 100%;
     text-align: center;
     color: #fff;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/Hero-min.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.ibb.co/2Fb4Qww/Hero-new.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -443,10 +443,6 @@ header a:hover {
     width: 60%;
 }
 
-/* .learn_more form.btn {
-    padding: 18px 42px;
-} */
-
 .learn_more input.btn {
     border-radius: 4px;
     text-transform: uppercase;
@@ -465,11 +461,6 @@ header a:hover {
 .learn_more form .btn {
     padding: 18px 42px;
 }
-
-/* .learn_more a {
-    text-decoration: none;
-    color: #fff;
-} */
 
 /*     Footer     */
 

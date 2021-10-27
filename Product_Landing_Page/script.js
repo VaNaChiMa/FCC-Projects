@@ -54,8 +54,6 @@ hamburger.addEventListener('click', () => {
 
 // Scroll button
 
-/* <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> */
-
 var scrollButton = document.querySelector(".scrollUp");
 
 scrollButton.addEventListener('click', () => {
