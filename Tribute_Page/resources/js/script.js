@@ -3,10 +3,6 @@
 
 $(document).ready(function() {
 
-	// $('h1').click(function() {
-	// 	$(this).css('background-color', '#ff0000');
-	// 	})
-
 	/* Navigation scroll */
     // Select all links with hashes
 $('a[href*="#"]')
@@ -28,21 +24,35 @@ $('a[href*="#"]')
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1500, function() {
-          // Callback after animation
-          // Must change focus!
-          // var $target = $(target);
-          // $target.focus();
-          // if ($target.is(":focus")) { // Checking if the target was focused
-          //   return false;
-          // } else {
-          //   $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-          //   $target.focus(); // Set focus again
-          // };
+          scrollTop: target.offset().top - 50
+        }, function() {
+          // 1500,
         });
       }
     }
   });
 
 });
+
+// Scroll button
+
+var scrollButton = document.querySelector(".scrollUp");
+
+scrollButton.addEventListener('click', () => {
+  topFunction()
+})
+
+document.querySelector('body').onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 570 || document.documentElement.scrollTop > 570) {
+    scrollButton.style.display = "block";
+  } else {
+    scrollButton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
