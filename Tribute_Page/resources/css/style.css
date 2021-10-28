@@ -12,7 +12,6 @@ html, body {
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   text-rendering: optimizeLegibility;
   background-color: #f1f1f1; 
-  /* scroll-padding-top: 50px; */
 }
 
 .row {
@@ -53,9 +52,10 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 33;
   padding: 18px 20px 16px 20px;
-    }
+  transition: .25s ease;
+  }
 
 .navbar ul {
   display: flex;
@@ -85,7 +85,7 @@ p {
   background-color: #fff;
   left: 0;
   bottom: -5px;
-  transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease;
 }
 
 .navbar a:first-child {
@@ -97,7 +97,7 @@ p {
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
-  transition: 0.25s ease-in-out;
+  transition: 0.25s ease;
 }
     
 .navbar a:hover,
@@ -111,7 +111,22 @@ p {
   left: 0;
 }
 
+.hamburger {
+  display: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.line {
+  height: 2px;
+  background-color: #fff;
+  width: 20px;
+  margin-bottom: 3px;
+  transition: all .5s ease;
+}
+
 #home {
+  position: relative;
   scroll-margin-top: 50px;
 }
 
@@ -119,11 +134,12 @@ p {
 
 header {
       background-color: #1ABC9C;
-      height: 100vh;
+      height: calc(100vh + 50px);
     }
 
 .hero-row {
       width: 100%;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -185,19 +201,29 @@ header {
   height: 70px;
   text-align: center;
   margin-bottom: 80px;
+  transition: 0.25s ease;
+}
+
+.header-queen:hover, .header-rook:hover {
+  box-shadow:0 1px 10px 5px rgba(26, 188, 156, 0.5);
 }
 
 .header-king {
+  background-color: #1abc9c;
   height: 70px;
   text-align: center;
   margin-bottom: 80px;
   box-shadow: 0 0 0 1px #dddfe2;
-  transition: all .2s ease-out;
+  transition: all .25s ease;
+}
+
+.mobile_header_king {
+  display: none;
 }
 
 .header-king:hover{box-shadow:0 1px 8px 5px #dddfe2;text-decoration:none}
 
-.section-tribute-info h2 {
+.desktop_header_king {
   background-color: transparent;
   display: inline-block;
 }
@@ -328,7 +354,7 @@ header {
 
   /* Make sure all circles are at the same spot */
   .left::after, .right::after {
-  left: 15px;
+  left: 4px;
   }
   
   /* Make all right containers behave like the left ones */
@@ -337,13 +363,19 @@ header {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .left::after, .right::after {
+    left: 7px;}
+}
+
+
      /*-----------------------------*/
      /*           Quotes            */
      /*-----------------------------*/
 
 #quotes {
-  scroll-margin-top:100px
-}     
+  scroll-margin-top: 50px;
+} 
 
 .section-quotes h2{
   display: inline-block;
@@ -397,10 +429,10 @@ header {
     /*-----------------------------*/
     /*        Bestgames            */
     /*-----------------------------*/
-
+    
 #best-games {
-  scroll-margin-top:50px
-}
+  scroll-margin-top: 50px;
+} 
 
 .section-best-games h2 {
   display: inline-block;
@@ -545,6 +577,7 @@ img.chess24 {
 @media only screen and (max-width: 1023px) {
       body { font-size: 14px; }
       section { padding: 0 0 60px 0; }
+      header {height: auto;}
       .hero-row {align-items: center;}
       .hero-text-box h1 {font-size: 4rem;}
       .hero-text-box h3 { font-size: 0.9rem; }
@@ -556,14 +589,18 @@ img.chess24 {
 @media only screen and (max-width: 767px) {
        body { font-size: 12px; }
        section { padding: 0 0 40px 0; }
-       header {height: auto;}
-      .hero-row { flex-direction: column-reverse; justify-content: center; align-items: center;}
+      .navbar a:first-child {margin-left: 0;}
+      .navbar a {font-size: 1rem;}
+      .navbar ul {justify-content: center;}
+      .hero-row { flex-direction: column-reverse; justify-content: center; align-items: center; height: auto;}
       .hero-text-box h1 {font-size: 3rem;}
       .hero-text-box h3 { font-size: 0.8rem; }
       .hero-image { width: 75%; }
+      .mobile_header_king {display: inline-block;}
+      .desktop_header_king {display: none;}
       .timeline {width: 100%;}
       .header-queen, .header-rook {margin-bottom: 40px;}
-      iframe{ width: 480px; height: 300px;}
+       iframe{ width: 480px; height: 300px;}
       .quotes-container {flex-direction: column; justify-content: center; align-items: center;}
       .quote1,
       .quote2,
@@ -572,8 +609,85 @@ img.chess24 {
 
   /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {
+
+      #timeline {
+        scroll-margin-top: 0;
+      }  
+
+      #quotes {
+        scroll-margin-top: 0;
+      } 
+
+      #best-games {
+        scroll-margin-top: 0;
+      } 
+
+    .navbar {
+      display: none;
+    }
+
+    .navbar.active {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      transition: all .5s ease;
+    }
+
+    #home.active {
+      display: none;
+    }
+
+    .navbar ul {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hamburger {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 50;
+      transition: transform 0.25s ease;
+    }
+
+    .active .line_1 {
+        transform: rotate(-40deg) translateY(6.5px);
+        background-color: #fff;
+    }
+    .active .line_2 {
+        opacity: 0;
+    }
+    .active .line_3 {
+        transform: rotate(40deg) translateY(-6.5px);
+        background-color: #fff;
+    }
+
+    .navbar ul li {
+      margin-bottom: 50px;
+    }
+
+    .navbar ul li:first-child {
+      margin-left: 0;
+    }
+
+    .navbar a {
+      font-size: 1.1rem;
+    }
+
+    .hero-text-box h1 {font-size: 2rem;}
       section { padding: 0 0 20px 0; }
-      .timeline {width: 100%;}
-      .header-queen, .header-rook {margin-bottom: 20px;}
+    .timeline {width: 100%;}
+    .header-queen, .header-rook {margin-bottom: 20px;}
+      iframe{ width: 350px; height: 650px;}
+}
+
+@media only screen and (max-width: 375px) {
+      .hero-text-box h1 {font-size: 1.5rem;}
+       iframe{ width: 300px; height: 650px;}
 }
 

@@ -1,8 +1,9 @@
 
 
-
 $(document).ready(function() {
-
+  if ($(window).width() > 480) { 
+  
+   
 	/* Navigation scroll */
     // Select all links with hashes
 $('a[href*="#"]')
@@ -31,8 +32,9 @@ $('a[href*="#"]')
       }
     }
   });
+  }
+}); 
 
-});
 
 // Scroll button
 
@@ -56,3 +58,20 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// Navigation
+
+const hamburger = document.querySelector('.hamburger')
+const navigation = document.querySelector('.navbar')
+const home = document.querySelector('#mynavbar')
+
+hamburger.addEventListener('click', () => {
+  navigation.classList.toggle('active')
+  hamburger.classList.toggle('active')
+})
+
+home.addEventListener('click', () => {
+  home.classList.toggle('active')
+  hamburger.classList.toggle('active')
+})
+
