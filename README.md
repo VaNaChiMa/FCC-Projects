@@ -1,4 +1,7 @@
 # Portofoliu - Vadim for FCC
+[All projects in one page](https://trusting-bhabha-c67443.netlify.app/)
+
+---
 
 1. [Tribute Page](https://keen-roentgen-8d0d0a.netlify.app/Tribute_Page/index.html)
 2. [Survey Form](https://keen-roentgen-8d0d0a.netlify.app/Survey_Form/index.html)
