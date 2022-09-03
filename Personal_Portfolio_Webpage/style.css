@@ -1,0 +1,54 @@
+/*
+        =============== 
+             Fonts
+        ===============
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+        =============== 
+            Variables
+        ===============
+*/
+:root {
+  --clr-white: #fff;
+  --clr-black: #000;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+}
+
+/*
+        =============== 
+        Global Styles
+        ===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*      Global classes      */
+
+main {
+  min-height: 100vh;
+  display: flex;
+  place-items: center;
+}
+
+/*   Elements   */
+
+main picture {
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+}
