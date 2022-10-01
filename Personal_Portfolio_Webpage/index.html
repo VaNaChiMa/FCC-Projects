@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="style.css">
 
     <title>Personal Portfolio Webpage</title>
@@ -14,7 +18,7 @@
 <body>
     <header>
         <div class="logo">
-            <a href="#"><img src="images/fcc_primary_small.svg" alt="fcc_logo"></a>
+            <a href="#"><img src="images/fcc_secondary_large.svg" alt="fcc_logo"></a>
         </div>
         <nav id="navbar">
             <ul class="links">
@@ -33,16 +37,190 @@
                 creating things for the web.
             </div>
         </section>
-        <section id="projects">
-            <div class="container">
-                <h3>Work/ Projects</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A saepe quis cum cupiditate, fugit porro,
-                    illo
-                    nobis tenetur ipsa nihil assumenda? Velit natus, sint dolor omnis vero veniam aliquam distinctio.
-                </p>
+
+        <section class="about">
+            <div class="about-title section-title">
+                <div class="section_label"><span class="section_label_number">1</span></div>
+                <span class="section_label_title">About</span>
+                <h2>Part of my universe</h2>
+            </div>
+            <div class="container about_container">
+                <div class="about_text">
+                    Hi there! My name is Vadim.
+                    I'm a self-taught Frontend developer from Moldova.
+                    I enjoy creating things for the web.
+                    Economics, accounting and of course chess are fields close to my activity.
+                    I always like to learn new things and I love teaching :)
+                </div>
+                <div class="technologies">
+                    <div class="technologies_row">
+                        <i class="fa-brands fa-html5"></i>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <i class="fa-brands fa-bootstrap"></i>
+                        <i class="fa-brands fa-sass"></i>
+                        <i class="fa-brands fa-square-js"></i>
+                        <i class="fa-brands fa-react"></i>
+                        <i class="fa-brands fa-node"></i>
+                        <i class="fa-brands fa-github"></i>
+
+                    </div>
+                </div>
             </div>
         </section>
-        <section>
+
+        <section class="work" id="projects">
+            <div class="work-title section-title">
+                <div class="section_label"><span class="section_label_number">2</span></div>
+                <span class="section_label_title">Work</span>
+                <h2>Some Things I’ve Built</h2>
+            </div>
+
+            <div class="container projects_container">
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="image-wrapper"><a href="https://vadim-fcc-projects.netlify.app/tribute_page/"
+                                target="_blank"><img src="images/Tibute page.png" alt="Tibute page"></a>
+                        </div>
+                        <div class="text-content">
+                            <div class="card-title">
+                                <h4>Tibute
+                                    page</h4>
+                            </div>
+
+                            <div class=" card-details">
+                                <div class="card-description">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sed esse
+                                        doloremque sit dolores in numquam architecto perspiciatis aperiam
+                                        aspernatur?
+                                    </p>
+                                </div>
+                                <!-- <div class="technology">
+                                    <span class="html">html</span>
+                                    <span class="css">css</span>
+                                    <span class="js">js</span>
+                                </div> -->
+
+                            </div>
+                            <div class="card-buttons">
+                                <a class="btn" href="https://vadim-fcc-projects.netlify.app/tribute_page/"
+                                    target="_blank">Live Site</a>
+                                <a class=" btn"
+                                    href="https://github.com/VaNaChiMa/FCC-Projects/tree/master/Tribute_Page"
+                                    target="_blank">Source
+                                    Code</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="image-wrapper"><a href="https://vadim-fcc-projects.netlify.app/survey_form/"
+                                target="_blank"><img src="images/Survey_form.png" alt="Survey form"></a>
+                        </div>
+                        <div class="text-content">
+                            <div class="card-title">
+                                <h4>Survey Form</h4>
+                            </div>
+
+                            <div class=" card-details">
+                                <div class="card-description">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sed esse
+                                        doloremque sit dolores in numquam architecto perspiciatis aperiam
+                                        aspernatur?
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="card-buttons">
+                                <a class="btn" href="https://vadim-fcc-projects.netlify.app/survey_form/"
+                                    target="_blank">Live Site</a>
+                                <a class=" btn" href="https://github.com/VaNaChiMa/FCC-Projects/tree/master/Survey_Form"
+                                    target="_blank">Source
+                                    Code</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="image-wrapper"><a
+                                href="https://vadim-fcc-projects.netlify.app/product_landing_page/" target="_blank"><img
+                                    src="images/Product_landing_page.png" alt="Product landing page"></a>
+                        </div>
+                        <div class="text-content">
+                            <div class="card-title">
+                                <h4>Product Landing Page</h4>
+                            </div>
+
+                            <div class=" card-details">
+                                <div class="card-description">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sed esse
+                                        doloremque sit dolores in numquam architecto perspiciatis aperiam
+                                        aspernatur?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-buttons">
+                                <a class="btn" href="https://vadim-fcc-projects.netlify.app/product_landing_page/"
+                                    target="_blank">Live Site</a>
+                                <a class=" btn"
+                                    href="https://github.com/VaNaChiMa/FCC-Projects/tree/master/Product_Landing_Page"
+                                    target="_blank">Source
+                                    Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="image-wrapper"><a
+                                href="https://vadim-fcc-projects.netlify.app/technical_documentation_page"
+                                target="_blank"><img src="images/Technical_documentation_page.png"
+                                    alt="Technical Documentation Page"></a>
+                        </div>
+                        <div class="text-content">
+                            <div class="card-title">
+                                <h4>Technical Documentation Page</h4>
+                            </div>
+
+                            <div class="card-details">
+                                <div class="card-description">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sed esse
+                                        doloremque sit dolores in numquam architecto perspiciatis aperiam
+                                        aspernatur?
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="card-buttons">
+                                <a class="btn"
+                                    href="https://vadim-fcc-projects.netlify.app/technical_documentation_page"
+                                    target="_blank">Live Site</a>
+                                <a class=" btn"
+                                    href="https://github.com/VaNaChiMa/FCC-Projects/tree/master/Technical_Documentation_Page"
+                                    target="_blank">Source
+                                    Code</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="contact-title section-title">
+                <div class="section_label"><span class="section_label_number">3</span></div>
+                <span class="section_label_title">Contact</span>
+                <h2>Get in touch</h2>
+            </div>
             <div class="container">
                 Contact
             </div>
